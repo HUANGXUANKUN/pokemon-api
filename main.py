@@ -11,10 +11,11 @@ for pokemon in data:
     output_s = {}
     output_s['id'] = pokemon['id']
     output_s['name'] = pokemon['name']['english']
-    output_s['type'] = ""
-    for a in pokemon['type']:
-        output_s['type'] += a + ', '
-    output_s['type'] = output_s['type'][:-2]
+    output_s['type'] = pokemon['type'][0]
+    # output_s['type'] = ""
+    # for a in pokemon['type']:
+    #     output_s['type'] += a + ', '
+    # output_s['type'] = output_s['type'][:-2]
     output_s['hp'] = pokemon['base']['HP']
     output_s['attack'] = pokemon['base']['Attack']
     output_s['defense'] = pokemon['base']['Defense']
